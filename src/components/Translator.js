@@ -63,7 +63,7 @@ export default function Translator() {
     return ( 
         <div className="container"> 
             <header className="header">
-                <h1>Translator App</h1>
+                <h1>Translator</h1>
                 <p>Translate text easily between multiple languages</p>
             </header>
             <div className="row1"> 
@@ -93,19 +93,31 @@ export default function Translator() {
                 </div> 
                 <div className="outputText"> 
                     <textarea value={translatedText} placeholder='Translated Text' onChange={(e) => setTranslatedText(e.target.value)}>{translatedText}</textarea> 
-                    <CopyToClipboard text={translatedText} onCopy={onCopyText}>
-                        <button style={buttonStyle}>Copy to Clipboard</button>
-                    </CopyToClipboard>
+                    <center>
+                        <CopyToClipboard text={translatedText} onCopy={onCopyText}>
+                            <button class="Btn">
+                                <svg viewBox="0 0 512 512" class="svgIcon" height="1em"><path d="M288 448H64V224h64V160H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64zm-64-96H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64z"></path></svg>
+                                <p class="text">Copy</p>
+                                <span class="effect"></span>
+                            </button>
+                        </CopyToClipboard>
+                    </center>
                     {copyStatus && <p>Text copied to clipboard!</p>}
-                    {loading && <p>Loading...</p>}
+                    
                 </div> 
             </div> 
-            <div className="row3"> 
-                <button className='btn' onClick={handleTranslate}> 
-                    <i className="fa fa-spinner fa-spin"></i> 
-                    <span className='translate'>Translate</span> 
-                </button> 
+            <div className="row3">  
+                <center>
+                    {loading && <div class="loader"></div>}
+                    <br></br>
+                    <button class="Btn" onClick={handleTranslate}>
+                        <p class="text">Translate</p>
+                        <span class="effect"></span>
+                    </button>
+                </center>
             </div> 
+            
+            
         </div> 
     ) 
 }

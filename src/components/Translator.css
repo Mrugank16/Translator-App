@@ -18,7 +18,55 @@ body {
     border-radius: 8px;
     max-width: 700px;
     margin: 0 auto; 
-}
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+          circle farthest-side at 0% 50%,
+          #282828 23.5%,
+          rgba(255, 170, 0, 0) 0
+        )
+        21px 30px,
+      radial-gradient(
+          circle farthest-side at 0% 50%,
+          #2c3539 24%,
+          rgba(240, 166, 17, 0) 0
+        )
+        19px 30px,
+      linear-gradient(
+          #282828 14%,
+          rgba(240, 166, 17, 0) 0,
+          rgba(240, 166, 17, 0) 85%,
+          #282828 0
+        )
+        0 0,
+      linear-gradient(
+          150deg,
+          #282828 24%,
+          #2c3539 0,
+          #2c3539 26%,
+          rgba(240, 166, 17, 0) 0,
+          rgba(240, 166, 17, 0) 74%,
+          #2c3539 0,
+          #2c3539 76%,
+          #282828 0
+        )
+        0 0,
+      linear-gradient(
+          30deg,
+          #282828 24%,
+          #2c3539 0,
+          #2c3539 26%,
+          rgba(240, 166, 17, 0) 0,
+          rgba(240, 166, 17, 0) 74%,
+          #2c3539 0,
+          #2c3539 76%,
+          #282828 0
+        )
+        0 0,
+      linear-gradient(90deg, #2c3539 2%, #282828 0, #282828 98%, #2c3539 0%) 0 0
+        #282828;
+    background-size: 40px 60px;
+  }
 
 .header {
     text-align: center;
@@ -28,12 +76,12 @@ body {
 .header h1 {
     margin: 0;
     font-size: 2em;
-    color: #4a90e2;
+    color: rgb(184, 236, 104);
 }
 
 .header p {
     margin: 0;
-    color: #888;
+    color: rgba(95, 157, 3, 0.96);
 }
 
 .row1 {
@@ -42,27 +90,28 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    
 }
 
 select {
     width: calc(50% - 20px);
     line-height: 40px;
     font-size: 14px;
-    border: 1px solid #dadce0;
+    border: 1px solid rgb(184, 236, 104);
     border-radius: 8px;
     height: 40px;
     padding-left: 18px;
     margin: 0 10px;
-    color: #4a90e2;
+    color: rgba(81, 135, 0, 0.96);
     cursor: pointer;
     outline: none;
     user-select: none;
-    background-color: #fff;
+    background-color: rgb(65, 64, 64);
 }
 
 .reversesvg {
     width: 20px;
-    color: #4a90e2;
+    color: rgba(81, 135, 0, 0.96);
     line-height: 40px;
     opacity: 0.8;
     vertical-align: middle;
@@ -82,8 +131,11 @@ select {
 .outputText {
     width: calc(50% - 20px);
     position: relative;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box; 
+    /* Ensure padding is included in width */
 }
+
+
 
 .row2 textarea {
     width: 100%;
@@ -91,12 +143,12 @@ select {
     resize: none;
     box-sizing: border-box;
     padding: 10px;
-    border: 1px solid #dadce0;
+    border: 1px solid rgba(81, 135, 0, 0.96);
     border-radius: 8px;
     font-size: 16px;
-    color: #202124;
+    color: rgba(131, 208, 15, 0.96);
     outline: none;
-    background-color: #fff;
+    background-color: rgb(65, 64, 64);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -109,46 +161,87 @@ select {
     right: 10px;
 }
 
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+
+.Btn {
+  width: 120px;
+  height: 45px;
+  background-color: rgb(65, 64, 64);
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.342);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .5s;
 }
 
-.btn:hover {
-    background-color: #357abd;
+.text {
+  color: rgb(184, 236, 104);
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  z-index: 2;
 }
 
-.translate {
-    margin-left: 10px;
+.svgIcon {
+  z-index: 2;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.svgIcon path {
+  fill: rgb(184, 236, 104);
 }
 
-button:hover {
-    background-color: #357abd;
+.Btn:hover {
+  color: rgb(230, 255, 193);
 }
 
-p {
-    margin: 10px 0 0;
-    color: #4a90e2;
-    font-size: 14px;
-    text-align: center;
+.effect {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(184, 236, 104);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  transition-duration: .5s;
 }
+
+.Btn:hover .effect {
+  transform: scale(15);
+  transform-origin: center;
+  opacity: 1;
+  transition-duration: .5s;
+}
+
+.Btn:hover {
+  box-shadow: 0px 0px 5px rgb(184, 236, 104),
+  0px 0px 10px rgb(184, 236, 104),
+  0px 0px 30px rgb(184, 236, 104);
+  transition-duration: .7s;
+}
+
+.Btn:hover .text {
+  color: rgb(65, 64, 64);
+}
+
+.Btn:hover .svgIcon path {
+  fill: rgb(65, 64, 64);
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 10px solid #1cd42550;
+    border-top-color: #1cd425;
+    animation: spin013151 1s linear infinite;
+    border-radius: 100%;
+  }
+  
+  @keyframes spin013151 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
