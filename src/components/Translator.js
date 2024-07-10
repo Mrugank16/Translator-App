@@ -11,7 +11,7 @@ export default function Translator() {
     const [copyStatus, setCopyStatus] = useState(false); 
     const [loading, setLoading] = useState(false); 
 
-    const buttonStyle = copyStatus ? { backgroundColor: 'green', color: 'white' } : {};
+    // const buttonStyle = copyStatus ? { backgroundColor: 'green', color: 'white' } : {};
 
     const onCopyText = () => {
         setCopyStatus(true);
