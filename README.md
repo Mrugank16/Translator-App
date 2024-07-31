@@ -1,4 +1,5 @@
 # Translator App
+![Image](translatorapp.png)
 
 A simple web application that translates text from one language to another using the Microsoft Translator Text API. The app allows users to select input and output languages, type or paste text to be translated, and copy the translated text to the clipboard. It also provides visual feedback during the translation process.
 
