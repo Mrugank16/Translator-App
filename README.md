@@ -1,6 +1,5 @@
 # Translator App
-![Image]([translatorapp.png](https://drive.google.com/file/d/1irMe4n4X7Z6Mx9H1OREisSYqI2NXHft9/view?usp=sharing))
-
+![Image](https://github.com/Mrugank16/Translator-App/blob/master/translatorapp.png)
 A simple web application that translates text from one language to another using the Microsoft Translator Text API. The app allows users to select input and output languages, type or paste text to be translated, and copy the translated text to the clipboard. It also provides visual feedback during the translation process.
 
 ## Features
